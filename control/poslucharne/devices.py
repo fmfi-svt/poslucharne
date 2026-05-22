@@ -1,7 +1,10 @@
-import enum
-from typing import Any
+from __future__ import annotations
 
-from poslucharne.room import Room
+import enum
+from typing import TYPE_CHECKING, Any
+
+if TYPE_CHECKING:
+    from poslucharne.room import Room
 
 
 class PowerState(enum.IntEnum):
