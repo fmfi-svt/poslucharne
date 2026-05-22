@@ -1,0 +1,20 @@
+name: C
+
+projectors:
+  - name: left
+    kind: poslucharne.integrations.pjlink.PjlinkProjector
+    config:
+      address: 192.168.88.201
+
+  - name: right
+    kind: poslucharne.integrations.pjlink.PjlinkProjector
+    config:
+      address: 192.168.88.202
+
+matrixes:
+  - name: matrix
+    kind: poslucharne.integrations.gefen.GefenMatrix
+    config:
+      address: 192.168.88.203
+      inputs: 4
+      outputs: 4
