@@ -11,6 +11,13 @@ projectors:
     config:
       address: 192.168.88.202
 
+  - name: _all_
+    kind: poslucharne.integrations.group.ProjectorGroup
+    config:
+      items:
+        - left
+        - right
+
 matrixes:
   - name: matrix
     kind: poslucharne.integrations.gefen.GefenMatrix
