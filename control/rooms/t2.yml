@@ -1,0 +1,16 @@
+name: T2
+
+projectors:
+  - name: main
+    kind: poslucharne.integrations.pjlink.PjlinkProjector
+    config:
+      address: 172.16.16.4
+
+screens:
+  - name: main
+    kind: poslucharne.integrations.esphome.ESPHomeScreen
+    config:
+      address: 172.16.16.5
+      up_switch: up
+      down_switch: down
+      stop_switch: stop
