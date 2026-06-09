@@ -52,3 +52,23 @@ class Projector(PowerableDevice, Device):
 class Matrix(PowerableDevice, Device):
     async def connect(self, input: str, output: str) -> None:
         raise NotImplementedError()
+
+
+class ScreenPosition(enum.IntEnum):
+    UNKNOWN = -1
+    DOWN = 0
+    UP = 1
+
+
+class Screen(Device):
+    async def up(self) -> None:
+        raise NotImplementedError()
+
+    async def down(self) -> None:
+        raise NotImplementedError()
+
+    async def stop(self) -> None:
+        raise NotImplementedError()
+
+    async def get_position(self) -> ScreenPosition:
+        raise NotImplementedError()

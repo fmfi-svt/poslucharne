@@ -5,7 +5,7 @@ from typing import TypeVar
 
 import yaml
 
-from poslucharne.devices import Device, Matrix, Projector
+from poslucharne.devices import Device, Matrix, Projector, Screen
 
 T = TypeVar("T")
 
@@ -15,8 +15,11 @@ class Room:
         self.config: dict = config
         self.name: str = self.config["name"]
 
-        self.projectors = self._create_devices(self.config["projectors"], Projector)
-        self.matrixes = self._create_devices(self.config["matrixes"], Matrix)
+        self.projectors = self._create_devices(
+            self.config.get("projectors", []), Projector
+        )
+        self.matrixes = self._create_devices(self.config.get("matrixes", []), Matrix)
+        self.screens = self._create_devices(self.config.get("screens", []), Screen)
 
     def _create_devices(
         self, device_list: list[dict], device_type: type[T]
