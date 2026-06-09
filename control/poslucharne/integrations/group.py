@@ -5,7 +5,7 @@ import asyncio
 
 class ProjectorGroup(Projector):
     @property
-    def projectors(self) -> Generator[Projector]:
+    def projectors(self) -> Generator[Projector, None, None]:
         for projector in self.config.get("items", []):
             yield self.room.projectors[projector]
 
