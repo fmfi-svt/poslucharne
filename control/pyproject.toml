@@ -5,6 +5,7 @@ requires-python = ">=3.12"
 dependencies = [
     "aiopjlink>=1.0.5",
     "fastapi>=0.115",
+    "httpx>=0.28.1",
     "pyyaml>=6.0.3",
     "uvicorn>=0.34",
 ]
