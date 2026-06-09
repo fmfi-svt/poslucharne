@@ -1,0 +1,36 @@
+device: /dev/input/by-id/usb-SayoDevice_SayoDevice_2x4V_RGB_00CDAB52A587BCA60D39E339E300-event-kbd
+
+bindings:
+  - keycode: 5
+    actions:
+      - url: http://localhost:8000/projectors/main/power_on/
+        method: POST
+  - keycode: 4
+    actions:
+      - url: http://localhost:8000/projectors/main/power_off/
+        method: POST
+  - keycode: 3
+    actions:
+      - url: http://localhost:8000/projectors/main/input/
+        method: POST
+        json:
+          input: HDMI1
+  - keycode: 2
+    actions:
+      - url: http://localhost:8000/projectors/main/input/
+        method: POST
+        json:
+          input: LAN
+
+  - keycode: 9
+    actions:
+      - url: http://localhost:8000/screens/main/up/
+        method: POST
+  - keycode: 8
+    actions:
+      - url: http://localhost:8000/screens/main/stop/
+        method: POST
+  - keycode: 7
+    actions:
+      - url: http://localhost:8000/screens/main/down/
+        method: POST
