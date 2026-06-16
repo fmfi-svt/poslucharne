@@ -16,14 +16,14 @@ bindings:
         method: POST
         json:
           input: "1"
-          output: ["1", "2", "3"]
+          outputs: ["1", "2", "3"]
   - keycode: 10
     actions:
       - url: http://localhost:8000/matrixes/matrix/connect_many/
         method: POST
         json:
           input: "2"
-          output: ["1", "2", "3"]
+          outputs: ["1", "2", "3"]
 
   - keycode: 9
     actions:
