@@ -36,9 +36,9 @@ class GefenMatrix(Matrix):
         input_i = int(input)
         output_i = int(output)
 
-        if input_i <= 0 or input > self.config.get("inputs", 0):
+        if input_i <= 0 or input_i > self.config.get("inputs", 0):
             raise ValueError(f"input {input_i} not available")
-        if output_i <= 0 or output > self.config.get("outputs", 0):
+        if output_i <= 0 or output_i > self.config.get("outputs", 0):
             raise ValueError(f"output {output_i} not available")
 
         await self._send_command(f"r {input_i} {output_i}")

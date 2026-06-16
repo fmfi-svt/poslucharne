@@ -52,4 +52,15 @@ def create_router(room: Room) -> APIRouter:
         await mat.connect(body.input, body.output)
         return {"ok": True}
 
+    class MatrixConnectManyRequest(BaseModel):
+        input: str
+        outputs: list[str]
+
+    @router.post("/{name}/connect_many/")
+    async def matrix_connect_many(name: str, body: MatrixConnectManyRequest):
+        mat = _get_matrix(name)
+        for output in body.outputs:
+            await mat.connect(body.input, output)
+        return {"ok": True}
+
     return router
