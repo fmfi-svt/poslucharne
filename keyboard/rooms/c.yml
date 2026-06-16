@@ -1,0 +1,35 @@
+device: /dev/input/by-id/usb-SayoDevice_SayoDevice_2x6F_RGB_03606532646141DB430000000000-event-kbd
+
+bindings:
+  - keycode: 2
+    actions:
+      - url: http://localhost:8000/projectors/_all_/power_on/
+        method: POST
+  - keycode: 3
+    actions:
+      - url: http://localhost:8000/projectors/_all_/power_off/
+        method: POST
+
+  - keycode: 4
+    actions:
+      - url: http://localhost:8000/matrixes/matrix/connect_many/
+        method: POST
+        json:
+          input: "1"
+          output: ["1", "2", "3"]
+  - keycode: 10
+    actions:
+      - url: http://localhost:8000/matrixes/matrix/connect_many/
+        method: POST
+        json:
+          input: "2"
+          output: ["1", "2", "3"]
+
+  - keycode: 9
+    actions:
+      - url: http://localhost:8000/projectors/left/power_on/
+        method: POST
+  - keycode: 8
+    actions:
+      - url: http://localhost:8000/projectors/right/power_on/
+        method: POST
