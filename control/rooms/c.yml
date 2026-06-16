@@ -4,12 +4,12 @@ projectors:
   - name: left
     kind: poslucharne.integrations.pjlink.PjlinkProjector
     config:
-      address: 192.168.88.201
+      address: 10.83.39.7
 
   - name: right
     kind: poslucharne.integrations.pjlink.PjlinkProjector
     config:
-      address: 192.168.88.202
+      address: 10.83.39.8
 
   - name: _all_
     kind: poslucharne.integrations.group.ProjectorGroup
@@ -22,6 +22,6 @@ matrixes:
   - name: matrix
     kind: poslucharne.integrations.gefen.GefenMatrix
     config:
-      address: 192.168.88.203
+      address: 10.83.39.6
       inputs: 4
       outputs: 4
